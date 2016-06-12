@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="StonePlayer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StonePlayer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
+
+    <Page.Resources>
+        <Image x:Key="Play" Source="Assets/play.png" Height="80" Width="80" />
+        <Image x:Key="Pause" Source="Assets/pause.png" Height="80" Width="80"/>
+    </Page.Resources>
+
+    <Grid Background="#FFF2F7FF">
+        <!--<Image Source="Assets/my-background.jpg" Stretch="Fill"/>-->
+
+        <Grid VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <!-- Black ring around Album art with opacity .10 -->
+            <Ellipse Height="525" Grid.Row="0" Width="525" Fill="Black" Opacity=".10" x:Name="AlbumartRing"/>
+
+            <!-- Album Art -->
+            <Ellipse Height="500" Grid.Row="0" Width="500" x:Name="Albumart" >
+                <Ellipse.Fill>
+                    <ImageBrush x:Name="albumrtImage" ImageSource="Assets\my-logo2.jpg" Stretch="UniformToFill" />
+                </Ellipse.Fill>
+            </Ellipse>
+
+            <!-- Bottom part of album art with controls -->
+            <Ellipse Height="500" Grid.Row="0" Width="500" x:Name="AlbumartContainerDown">
+                <Ellipse.Clip >
+                    <RectangleGeometry x:Name="AlbumartContainerDownClip" Rect="0,250,500,500" />
+                </Ellipse.Clip>
+            </Ellipse>
+
+            <TextBlock x:Name="txtSongTitle" Grid.Row="0" HorizontalAlignment="Center" Text="Song Title " FontSize="25" Foreground="#FF171717" Style="{StaticResource HeaderTextBlockStyle}" TextTrimming="WordEllipsis"  />
+            <StackPanel Margin="0,480,0,0" x:Name="ControlContainer" Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
+                <Button x:Name="btnPrev" Background="Transparent" Height="80" Width="80" Click="btnNext_Click">
+                    <Image  Source="Assets/Prev.png"  Stretch="Uniform" Opacity="0.7"/>
+                </Button>
+                <Button x:Name="btnPlay" Background="Transparent" Height="100" Width="100" Click="btnNext_Click">
+                    <Image Source="Assets/play.png" Stretch="Uniform" Opacity="0.7"/>
+                </Button>
+                <Button x:Name="btnNext" Background="Transparent" Height="80" Width="80" Click="btnNext_Click">
+                    <Image Source="Assets/Next.png" Stretch="Uniform" Opacity="0.5"/>
+                </Button>
+            </StackPanel>
+
+            <MediaElement Name="player" PosterSource="Assets/stone-back.png" AutoPlay="True"
+                          CurrentStateChanged="MusicPlayer_CurrentStateChanged" MediaEnded="player_MediaEnded"/>
+        </Grid>
+    </Grid>
+</Page>
