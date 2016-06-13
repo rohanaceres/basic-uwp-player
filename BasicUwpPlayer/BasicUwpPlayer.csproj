@@ -98,6 +98,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Hearable.cs" />
+    <Compile Include="IHearable.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -110,29 +112,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\my-background.jpg" />
-    <Content Include="Assets\my-logo2.jpg" />
+    <Content Include="Assets\my-logo.jpg" />
     <Content Include="Assets\next.png" />
     <Content Include="Assets\pause.png" />
     <Content Include="Assets\play.png" />
     <Content Include="Assets\prev.png" />
-    <Content Include="Assets\recordings\1.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\recordings\2.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\recordings\3.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\recordings\4.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\recordings\5.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\recordings\6.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Assets\recordings\Adventure Time Theme.mp3" />
+    <Content Include="Assets\recordings\Bacon Pancakes.mp3" />
+    <Content Include="Assets\recordings\Island Song.mp3" />
+    <Content Include="Assets\recordings\Marceline Frys.mp3" />
+    <Content Include="Assets\recordings\Oh, Fionna.mp3" />
+    <Content Include="Assets\recordings\Unacceptable!.mp3" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

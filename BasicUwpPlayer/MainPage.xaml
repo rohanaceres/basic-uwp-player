@@ -1,8 +1,8 @@
 ﻿<Page
-    x:Class="StonePlayer.MainPage"
+    x:Class="BasicUwpPlayer.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:StonePlayer"
+    xmlns:local="using:BasicUwpPlayer"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -26,7 +26,7 @@
             <!-- Album Art -->
             <Ellipse Height="500" Grid.Row="0" Width="500" x:Name="Albumart" >
                 <Ellipse.Fill>
-                    <ImageBrush x:Name="albumrtImage" ImageSource="Assets\my-logo2.jpg" Stretch="UniformToFill" />
+                    <ImageBrush x:Name="albumrtImage" ImageSource="Assets\my-logo.jpg" Stretch="UniformToFill" />
                 </Ellipse.Fill>
             </Ellipse>
 
@@ -39,13 +39,13 @@
 
             <TextBlock x:Name="txtSongTitle" Grid.Row="0" HorizontalAlignment="Center" Text="Song Title " FontSize="25" Foreground="#FF171717" Style="{StaticResource HeaderTextBlockStyle}" TextTrimming="WordEllipsis"  />
             <StackPanel Margin="0,480,0,0" x:Name="ControlContainer" Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
-                <Button x:Name="btnPrev" Background="Transparent" Height="80" Width="80" Click="btnNext_Click">
+                <Button x:Name="btnPrev" Background="Transparent" Height="80" Width="80" Click="OnPlayerButtonClick">
                     <Image  Source="Assets/Prev.png"  Stretch="Uniform" Opacity="0.7"/>
                 </Button>
-                <Button x:Name="btnPlay" Background="Transparent" Height="100" Width="100" Click="btnNext_Click">
+                <Button x:Name="btnPlay" Background="Transparent" Height="100" Width="100" Click="OnPlayerButtonClick">
                     <Image Source="Assets/play.png" Stretch="Uniform" Opacity="0.7"/>
                 </Button>
-                <Button x:Name="btnNext" Background="Transparent" Height="80" Width="80" Click="btnNext_Click">
+                <Button x:Name="btnNext" Background="Transparent" Height="80" Width="80" Click="OnPlayerButtonClick">
                     <Image Source="Assets/Next.png" Stretch="Uniform" Opacity="0.5"/>
                 </Button>
             </StackPanel>
