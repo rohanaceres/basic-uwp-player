@@ -17,11 +17,9 @@ Na pasta Assets, trocar o arquivo **my-logo.jpg** pela sua logo. É desejável q
 ## Screenshots
 
 - Windows 10
-[](https://raw.githubusercontent.com/rohanaceres/basic-uwp-player/develop/Screenshots/Windows10.png)
+![](https://raw.githubusercontent.com/rohanaceres/basic-uwp-player/develop/Screenshots/Windows10.png)
 
 - Windows Phone 10
-[](https://raw.githubusercontent.com/rohanaceres/basic-uwp-player/develop/Screenshots/WindowsPhone10.jpg)
-
-### Exemplo de aplicativo (em breve)
+<br/><img src="https://raw.githubusercontent.com/rohanaceres/basic-uwp-player/develop/Screenshots/WindowsPhone10.jpg" height="700">
 
 ### that's all, folks [:octopus:](mailto:ceres.rohana@gmail.com)
